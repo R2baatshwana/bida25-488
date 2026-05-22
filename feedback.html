@@ -2,26 +2,177 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feedback | Tlhalefo Cafe</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Custom External Stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-navy">
+
+    <!-- Accessible Skiplink -->
+    <a class="visually-hidden-focusable" href="#main-content">Skip to main content</a>
+
+    <!-- Top Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-navy sticky-top" aria-label="Main Navigation">
         <div class="container">
-            <a class="navbar-brand" href="index.html">Tlhalefo Cafe</a>
-            <div class="collapse navbar-collapse"><ul class="navbar-nav ms-auto"><li class="nav-item"><a class="nav-link" href="index.html">Home</a></li><li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li><li class="nav-item"><a class="nav-link" href="about.html">About</a></li><li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li><li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li></ul></div>
+            <a class="navbar-brand d-flex align-items-center" href="index.html" title="Tlhalefo Cafe Home">
+                <img src="images/tlhalefo-emblem.png" alt="Tlhalefo Cafe Emblem Logo" width="45" height="45" class="d-inline-block align-text-top me-2 rounded-circle border border-2 border-accent">
+                <span class="logo-text font-serif">Tlhalefo Cafe</span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link py-2 px-3" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link py-2 px-3" href="menu.html">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link py-2 px-3" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link py-2 px-3" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active py-2 px-3 btn btn-accent text-white ms-lg-2 px-4 shadow-sm" aria-current="page" href="feedback.html">Feedback</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
-    <main class="container py-5">
-        <h2>We Value Your Feedback</h2>
-        <form class="pt-3">
-            <div class="mb-3"><input type="text" class="form-control" placeholder="Name" required></div>
-            <div class="mb-3"><input type="email" class="form-control" placeholder="Email" required></div>
-            <textarea class="form-control mb-3" placeholder="Message" required></textarea>
-            <button type="submit" class="btn btn-primary">Submit Form</button>
-        </form>
+
+    <!-- Page Header -->
+    <header class="bg-navy text-white text-center py-5 shadow-sm">
+        <div class="container mt-3">
+            <h1 class="display-4 font-serif animate-fade-in">We Value Your Voice</h1>
+            <p class="lead text-white-50">Have a question or want to book a table? Let us know below.</p>
+        </div>
+    </header>
+
+    <!-- Main Form Area -->
+    <main id="main-content" class="container py-5 my-4">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-xl-7">
+                <div class="card shadow-lg border-0 p-4 p-md-5 bg-white">
+                    <h2 class="font-serif text-navy text-center mb-4 pb-2 border-bottom">Feedback Form</h2>
+                    
+                    <!-- Validated Bootstrap HTML5 Form -->
+                    <form class="needs-validation" action="#" method="POST" novalidate>
+                        
+                        <!-- Name Field -->
+                        <div class="form-floating mb-4">
+                            <input type="text" class="form-control" id="nameInput" placeholder="John Doe" required>
+                            <label for="nameInput">Full Name</label>
+                            <div class="invalid-feedback">
+                                Please provide your full name.
+                            </div>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+
+                        <!-- Email Field -->
+                        <div class="form-floating mb-4">
+                            <input type="email" class="form-control" id="emailInput" placeholder="name@example.com" required>
+                            <label for="emailInput">Email Address</label>
+                            <div class="invalid-feedback">
+                                Please provide a valid email address.
+                            </div>
+                        </div>
+
+                        <!-- Subject Radio Selection -->
+                        <div class="mb-4 p-3 border rounded bg-light">
+                            <p class="mb-2 fw-bold text-navy">Reason for contacting us:</p>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="subjectOptions" id="inquiryRadio" value="inquiry" required>
+                                <label class="form-check-label" for="inquiryRadio">General Inquiry</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="subjectOptions" id="bookingRadio" value="booking">
+                                <label class="form-check-label" for="bookingRadio">Table Booking</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="subjectOptions" id="complaintRadio" value="complaint">
+                                <label class="form-check-label" for="complaintRadio">Complaint</label>
+                            </div>
+                        </div>
+
+                        <!-- Message Field -->
+                        <div class="form-floating mb-4">
+                            <textarea class="form-control" id="messageInput" placeholder="Leave a message here" style="height: 150px" required></textarea>
+                            <label for="messageInput">Your Message</label>
+                            <div class="invalid-feedback">
+                                Please enter your message in the text area.
+                            </div>
+                        </div>
+
+                        <!-- Form Actions -->
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-4">
+                            <button class="btn btn-outline-secondary px-4 py-2 me-md-2" type="reset">Clear Form</button>
+                            <button class="btn btn-accent px-5 py-2 shadow-sm" type="submit"><i class="fa-solid fa-paper-plane me-2"></i>Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </main>
-    <footer class="bg-dark text-white text-center py-3">© 2026 Tlhalefo Cafe</footer>
+
+    <!-- Page Uniform Footer -->
+    <footer class="footer bg-dark-navy text-white text-center py-4 border-top border-accent">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4 text-md-start mb-3 mb-md-0">
+                    <h4 class="h5 font-serif text-accent">Tlhalefo Cafe</h4>
+                    <p class="small text-white-50 m-0">Brewing Wisdom, One Cup at a Time.</p>
+                </div>
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <div class="d-flex justify-content-center gap-3">
+                        <a href="#" class="social-link text-white opacity-75 hover-opacity-100" title="Follow us on Facebook"><i class="fa-brands fa-facebook fa-lg"></i></a>
+                        <a href="#" class="social-link text-white opacity-75 hover-opacity-100" title="Follow us on Instagram"><i class="fa-brands fa-instagram fa-lg"></i></a>
+                        <a href="#" class="social-link text-white opacity-75 hover-opacity-100" title="Follow us on Twitter"><i class="fa-brands fa-twitter fa-lg"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 text-md-end">
+                    <p class="small text-white-50 m-0"><i class="fa-regular fa-clock me-1"></i> Mon - Sat: 07:00 - 20:00</p>
+                    <p class="small text-white-50 m-0"><i class="fa-solid fa-location-dot me-1"></i> Plot 1234, Main Mall, Gaborone</p>
+                </div>
+            </div>
+            <hr class="border-white-10 my-3">
+            <div class="small text-white-50">
+                © 2026 Tlhalefo Cafe. All Rights Reserved. Botswana Accountancy College Web & Multimedia Development Coursework.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom Client-Side Form Validation Script (Behavioral Layer) -->
+    <script>
+        (function () {
+            'use strict'
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })()
+    </script>
 </body>
 </html>
