@@ -1,62 +1,198 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tlhalefo Cafe | Brewing Wisdom</title>
-    <!-- Bootstrap 5 CSS -->
+    <title>Tlhalefo Cafe | Brewing Wisdom, One Cup at a Time</title>
+    <!-- Bootstrap 5 CSS (Premium CDN Integration) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome for Premium Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Custom External Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-navy">
+    <!-- Accessible Skiplink for Screen Readers (A+ Standard) -->
+    <a class="visually-hidden-focusable" href="#main-content">Skip to main content</a>
+
+    <!-- Top Navigation Bar (Structural Layer with Hamburger Mobile Toggle) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-navy sticky-top" aria-label="Main Navigation">
         <div class="container">
-            <a class="navbar-brand" href="index.html">Tlhalefo Cafe</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <a class="navbar-brand d-flex align-items-center" href="index.html" title="Tlhalefo Cafe Home">
+                <!-- Circular Logo Emblem Placeholder (Perfect for custom-designed PNGs) -->
+                <img src="images/tlhalefo-emblem.png" alt="Tlhalefo Cafe Emblem Logo" width="45" height="45" class="d-inline-block align-text-top me-2 rounded-circle border border-2 border-accent">
+                <span class="logo-text font-serif">Tlhalefo Cafe</span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link active py-2 px-3" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link py-2 px-3" href="menu.html">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link py-2 px-3" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link py-2 px-3" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link py-2 px-3 btn btn-accent text-white ms-lg-2 px-4 shadow-sm" href="feedback.html">Feedback</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header class="hero text-center py-5">
+    <!-- Main Content Area -->
+    <main id="main-content">
+        
+        <!-- Hero Section (Visual Background Layer with Overlay Gradient) -->
+        <header class="hero d-flex align-items-center justify-content-center text-center">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content position-relative text-white py-5">
+                <span class="badge bg-accent px-3 py-2 text-uppercase mb-3 tracking-wide shadow">Traditional & Modern Fusion</span>
+                <h1 class="display-2 font-serif mb-3 animate-fade-in">Brewing Wisdom, <br class="d-none d-md-inline">One Cup at a Time.</h1>
+                <p class="lead mb-4 mx-auto max-width-600 font-sans opacity-90">
+                    Welcome to Gaborone’s premier co-working sanctuary and artisanal espresso house. Designed to foster connection, intellect, and creativity across all generations.
+                </p>
+                <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+                    <a href="menu.html" class="btn btn-accent btn-lg px-4 py-3 shadow" data-bs-toggle="tooltip" data-bs-placement="top" title="Explore our custom brews and bites">
+                        <i class="fa-solid fa-mug-hot me-2"></i>View Our Menu
+                    </a>
+                    <a href="contact.html" class="btn btn-outline-light btn-lg px-4 py-3 shadow-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Find where we are located in Gaborone">
+                        <i class="fa-solid fa-map-location-dot me-2"></i>Find Us
+                    </a>
+                </div>
+                <!-- Dynamic Interactive Scroll Indicator (JavaScript Driven) -->
+                <div class="scroll-down mt-5 pt-3">
+                    <a href="#features-section" class="text-white opacity-75 hover-opacity-100" aria-label="Scroll down to features">
+                        <i class="fa-solid fa-chevron-down fa-2x bounce"></i>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Features Showcase Section (Grid & Flexbox Box Model Layer) -->
+        <section id="features-section" class="container py-5 my-3">
+            <div class="text-center mb-5">
+                <h2 class="section-title font-serif position-relative d-inline-block pb-3">The Tlhalefo Experience</h2>
+                <p class="text-muted max-width-600 mx-auto mt-2">Discover how we are re-engineering the classic neighborhood cafe space into a highly intuitive haven of productivity.</p>
+            </div>
+            
+            <div class="row g-4 justify-content-center">
+                <!-- Feature Card 1 -->
+                <div class="col-md-4 col-sm-6">
+                    <article class="card h-100 shadow border-0 overflow-hidden hover-card">
+                        <figure class="m-0 position-relative">
+                            <!-- Image Slot for Artisanal Coffee -->
+                            <img src="images/artisanal-coffee.jpg" alt="Barista pouring precise latte art on an espresso drink" width="400" height="250" class="img-fluid card-img-top object-fit-cover">
+                            <span class="card-badge bg-navy">Signature Brew</span>
+                        </figure>
+                        <div class="card-body p-4">
+                            <h3 class="h4 card-title font-serif text-navy mb-3"><i class="fa-solid fa-seedling me-2 text-accent"></i>Artisanal Coffee</h3>
+                            <p class="card-text text-muted">
+                                We source strictly organic, single-origin Arabica beans locally and within Africa, roasted to bring out the boldest intellectual flavors.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Feature Card 2 -->
+                <div class="col-md-4 col-sm-6">
+                    <article class="card h-100 shadow border-0 overflow-hidden hover-card">
+                        <figure class="m-0 position-relative">
+                            <!-- Image Slot for Freshly Baked Goods -->
+                            <img src="images/freshly-baked.jpg" alt="Tray of golden-brown butter croissants straight out of the oven" width="400" height="250" class="img-fluid card-img-top object-fit-cover">
+                            <span class="card-badge bg-accent">Baked Daily</span>
+                        </figure>
+                        <div class="card-body p-4">
+                            <h3 class="h4 card-title font-serif text-navy mb-3"><i class="fa-solid fa-wheat-awn me-2 text-accent"></i>Freshly Baked</h3>
+                            <p class="card-text text-muted">
+                                Handcrafted pastries, artisanal sourdoughs, and delectable treats baked directly in our on-site ovens every morning.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Feature Card 3 -->
+                <div class="col-md-4 col-sm-6">
+                    <article class="card h-100 shadow border-0 overflow-hidden hover-card">
+                        <figure class="m-0 position-relative">
+                            <!-- Image Slot for Co-Working Space -->
+                            <img src="images/co-working.jpg" alt="Bright and spacious co-working table with notebooks, laptops, and coffee cups" width="400" height="250" class="img-fluid card-img-top object-fit-cover">
+                            <span class="card-badge bg-navy">Ultra-Fast Fiber</span>
+                        </figure>
+                        <div class="card-body p-4">
+                            <h3 class="h4 card-title font-serif text-navy mb-3"><i class="fa-solid fa-laptop-code me-2 text-accent"></i>Co-Working Space</h3>
+                            <p class="card-text text-muted">
+                                A high-octane quiet zone fully optimized with high-speed fiber internet, private study nooks, and ergonomic seating for professionals.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Page Uniform Footer -->
+    <footer class="footer bg-dark-navy text-white text-center py-4 border-top border-accent">
         <div class="container">
-            <h1 class="display-3">Brewing Wisdom, One Cup at a Time.</h1>
-            <a href="menu.html" class="btn btn-primary mt-3">View Our Menu</a>
+            <div class="row align-items-center">
+                <div class="col-md-4 text-md-start mb-3 mb-md-0">
+                    <h4 class="h5 font-serif text-accent">Tlhalefo Cafe</h4>
+                    <p class="small text-white-50 m-0">Brewing Wisdom, One Cup at a Time.</p>
+                </div>
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <div class="d-flex justify-content-center gap-3">
+                        <a href="#" class="social-link text-white opacity-75 hover-opacity-100" title="Follow us on Facebook"><i class="fa-brands fa-facebook fa-lg"></i></a>
+                        <a href="#" class="social-link text-white opacity-75 hover-opacity-100" title="Follow us on Instagram"><i class="fa-brands fa-instagram fa-lg"></i></a>
+                        <a href="#" class="social-link text-white opacity-75 hover-opacity-100" title="Follow us on Twitter"><i class="fa-brands fa-twitter fa-lg"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 text-md-end">
+                    <p class="small text-white-50 m-0"><i class="fa-regular fa-clock me-1"></i> Mon - Sat: 07:00 - 20:00</p>
+                    <p class="small text-white-50 m-0"><i class="fa-solid fa-location-dot me-1"></i> Plot 1234, Main Mall, Gaborone</p>
+                </div>
+            </div>
+            <hr class="border-white-10 my-3">
+            <div class="small text-white-50">
+                © 2026 Tlhalefo Cafe. All Rights Reserved. Botswana Accountancy College Web & Multimedia Development Coursework.
+            </div>
         </div>
-    </header>
-
-    <!-- Features -->
-    <section class="container py-5">
-        <div class="row text-center">
-            <div class="col-md-4">
-                <div class="card p-3"><h3>Artisanal Coffee</h3><p>We source organic beans locally.</p></div>
-            </div>
-            <div class="col-md-4">
-                <div class="card p-3"><h3>Freshly Baked</h3><p>Pastries baked daily on-site.</p></div>
-            </div>
-            <div class="col-md-4">
-                <div class="card p-3"><h3>Co-Working Space</h3><p>Quiet environment with Wi-Fi.</p></div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="bg-dark text-white text-center py-3">
-        <p>© 2026 Tlhalefo Cafe | Gaborone, Botswana</p>
     </footer>
 
+    <!-- Bootstrap 5 JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom High-Achieving JavaScript Interactivity -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // 1. Initialize Bootstrap Tooltips with premium custom configurations
+            const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+            const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+
+            // 2. Smooth Scrolling to Features Section
+            const scrollIndicator = document.querySelector(".scroll-down a");
+            if (scrollIndicator) {
+                scrollIndicator.addEventListener("click", function(event) {
+                    event.preventDefault();
+                    const targetId = this.getAttribute("href");
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: "smooth"
+                        });
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 </html>
